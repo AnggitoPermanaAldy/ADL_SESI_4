@@ -5,7 +5,7 @@ public class belajar {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		belajar alter = new belajar();
-		alter.latihanInput();
+		alter.insertData();
 	
 	}
 	public void latihan() {
@@ -96,4 +96,44 @@ public class belajar {
 			//System.out.print("Masukkan nama mahasiswa ke "+i+" = ");
 			//namaMahasiswa[i]=scan.next();
 	}		 	
+
+	public void insertData() {
+		Scanner scan = new Scanner(System.in);
+		
+	
+		
+		System.out.print("Masukkan banyak data");
+		
+		int jmlData = scan.nextInt();
+		
+		ModelData[] data = new ModelData[jmlData];
+		
+		for (int i = 0; i< jmlData; i++) {
+			data[i] =new ModelData();
+			System.out.print("Masukkan nama anda : ");
+			String nama = scan.next();
+			
+			data[i].setNama(nama);
+			
+			System.out.print("Masukkan alamat anda :");
+			String alamat = scan.next();
+			data[i].setAlamat(alamat);
+		}
+		
+		for (ModelData modelData : data) {
+			
+			System.out.println("===========================");
+			System.out.println("Nama : " + modelData.getNama());
+			System.out.println("Alamat : " + modelData.getAlamat());
+			System.out.println("===========================");
+		}
+		
+		for (int i = 0; i< jmlData; i++) {
+			System.out.println("===========================");
+			System.out.println("Nama : " + data[i].getNama());
+			System.out.println("Alamat : " + data[i].getAlamat());
+			System.out.println("===========================");
+		}
+	}
+
 }
