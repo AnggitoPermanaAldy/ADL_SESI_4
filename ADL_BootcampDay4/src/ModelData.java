@@ -3,7 +3,6 @@ public class ModelData {
 
 	private String nama;
 	private String alamat;
-	private int nilai;
 	
 	public String getNama() {
 		return nama;

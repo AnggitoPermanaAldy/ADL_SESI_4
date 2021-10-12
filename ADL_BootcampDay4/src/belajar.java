@@ -5,7 +5,7 @@ public class belajar {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		belajar alter = new belajar();
-		alter.insertData();
+		alter.latihan();
 	
 	}
 	public void latihan() {
